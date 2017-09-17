@@ -40,6 +40,8 @@ Different variants of Autoencoders:
   
   4. Contractive autoencoder (CAE) - adds an explicit regularizer in their objective function that forces the model to learn a function that is robust to slight variations of input values
 
+Autoencoders are lossy, which means that the decompressed outputs will be degraded compared to the original inputs (similar to MP3 or JPEG compression). This differs from lossless arithmetic compression.
+
 ## Why use Autoencoders?
 
 Similar to PCA – autoencoders can be used for finding a low-dimensional representation of your input data. Why is this useful?
@@ -62,4 +64,10 @@ The results of both the approaches are as shown below:
 
 2. Convolutional Autoencoder
 
-![Convoultional-Autoencoder](https://github.com/darshanbagul/Autoencoders/blob/master/images/conv_autoencoder_result.png)
+![Convolutional-Autoencoder](https://github.com/darshanbagul/Autoencoders/blob/master/images/conv_autoencoder_result.png)
+
+## Conclusion
+
+Since our inputs are images, it makes sense to use convolutional neural networks (convnets) as encoders and decoders. However, the convolutional autoencoders generate a very lossy version of the original image.
+
+As expected the quality is not very high, but the “semantics” of each image is almost preserved.Hence, these autoencoders cannot be used for replacing traditional image compression algorithms such as JPEG, but can certainly be used for training an image classifier, because the spatial representations and semantics are important rather than data quality. 
