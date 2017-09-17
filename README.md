@@ -21,6 +21,9 @@ Some facts about the autoencoder:
   4. The neural network’s target output is its input
 
 ## Theory
+
+![Autoencoder_Architecture](https://github.com/darshanbagul/Autoencoders/blob/master/images/Autoencoder_structure.png)
+
 The simplest form of an autoencoder is a feedforward, non-recurrent neural network very similar to the multilayer perceptron (MLP) – having an input layer, an output layer and one or more hidden layers connecting them –, but with the output layer having the same number of nodes as the input layer, and with the purpose of reconstructing its own inputs (instead of predicting the target value Y given inputs X). Therefore, autoencoders are unsupervised learning models.
 
 An autoencoder always consists of two parts, the encoder network and the decoder network. The task of the encoder is to generate a lower dimensional embedding Z, which is referred to code, latent variables, or latent representation. After that, the decoder stage of the autoencoder maps Z  to the reconstruction X' of the same shape as X. 
@@ -48,3 +51,15 @@ If the “reconstruction (X')” of X is very accurate, that implies our low-dim
 ## Dataset
 
 We will use images of Pokemons as input and try to train a simple Autoencoder and a Convolutional autoencoder, with an aim to generate low-dimensional representations of the images using encoder network. The decoder network shall try to use this latent representation for reconstructing our original input.
+
+# Results
+
+The results of both the approaches are as shown below:
+
+1. MLP Autoencoder
+
+![Simple-Autoencoder](https://github.com/darshanbagul/Autoencoders/blob/master/images/Autoencoder_result.png)
+
+2. Convolutional Autoencoder
+
+![Convoultional-Autoencoder](https://github.com/darshanbagul/Autoencoders/blob/master/images/conv_autoencoder_result.png)
